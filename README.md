@@ -1,2 +1,3 @@
-#mpvue-wxapp-zidan
-this is wxchat project about zidan app function achieve in wxchat appliacation
+# 2018秋季校招笔试编程题javascript版
+
+说明：该项目为2018各大互联网公司（有：京东，百度，阿里，爱奇艺等）的校招题目，希望对各位有所用处，可能有的实现方案不够好，欢迎各位提出issue前来交流学习
