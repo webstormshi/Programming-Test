@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .container {
+        border: 1px solid red;
+        width: 500px;
+        /* height: 300px; */
+        margin: 100px auto;
+    }
+    .container div{
+        border: 1px solid black;
+        /* height: 100px; */
+    }
+    .left {
+        float: left;
+        width: 100px;
+        height: 100px;
+    }
+    .right {
+        float: right;
+        width: 100px;
+        height: 100px;
+    }
+    .center {
+       
+    }
+    .clear {
+        /* zoom: 1; */
+        /* overflow: hidden; */
+        /* overflow: auto; */
+        /* display: table; */
+        clear: both;
+    }
+    /* .clear::after {
+        display: block;
+        clear: both;
+        content: '';
+        visibility: hidden;
+        height: 0;
+    } */
+    .menu {
+        border: 1px solid red;
+    }
+    .menu .item {
+        float: left;
+        width: 100px;
+        height: 30px;
+        border: 1px solid blue;
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="right"></div>
+        <div class="center">woshcvsdcs</div>
+        <div class="left"></div>
+        <div class="clear"></div>
+    </div>
+    <ul class="menu">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <br class="clear" />
+    </ul>
+</body>
+</html>
