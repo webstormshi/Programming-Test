@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>测试是否存在xss漏洞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <label>
+      输入用户评论：<br/>
+      <input type="text" id="comment" placeholder="请输入你的评论" /><br/>
+      <input type="submit" value="提交" onclick="publish()" /><br/>
+  </label>
+  <p>
+    我的评论<br/>
+    <span id="myComment"></span>
+  </p>
+<script>
+  /**
+   * 注意：使用innerHtml插入代码，只是当作普通的html执行，js解析器不会执行js脚本。
+  */
+function publish() {
+  var comment = document.getElementById('comment').value
+  console.log(comment)
+  if(!comment) {
+    alert(' comment can not be empty')
+  }
+  document.getElementById('myComment').innerHTML = comment
+}
+</script>
+</body>
+</html>
