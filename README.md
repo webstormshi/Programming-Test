@@ -1,3 +1,18 @@
-# 2018秋季校招笔试编程题javascript版
+# basic-practice-demos
+frontend technology knowledge Practice examples and demo projects
 
-说明：该项目为2018各大互联网公司（有：京东，百度，阿里，爱奇艺等）的校招题目，希望对各位有所用处，可能有的实现方案不够好，欢迎各位提出issue前来交流学习
+## content 
+- [业务逻辑](/business)
+- [数据结构](/data_struture)
+- [算法](/algorithm)
+- [设计模式](/design_pattern)
+- [CSS样式](/css)
+- [原生Javascript](/navtive_js)
+- [面向对象javascript](/oop)
+- [ES6](/es6)
+- [校招笔试题](/test)
+- [vue.js](/vue)
+- [慕课Demo](/mooc)
+
+## author contaction 
+Email：sy1446631745@163.com
