@@ -36,13 +36,31 @@
         width: 20%;
         height: 20%;
     }
+    .parent {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+        position: relative;
+    }
+    .child {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid red;
+    }
     </style>
 </head>
 <body>
-    <div class="warpper">
+    <!-- <div class="warpper">
         <div class="content">
             <div class="inner"></div>
         </div>
+    </div> -->
+    <div class="parent">
+        <div class="child"></div>
     </div>
 </body>
 </html>

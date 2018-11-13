@@ -52,7 +52,7 @@ const deepClone = obj => {
     for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
             let copy = obj[key]
-            if(isClass)
+            // if(isClass)
         }
     }
 }
