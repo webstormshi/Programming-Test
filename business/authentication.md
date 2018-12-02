@@ -115,6 +115,7 @@ session-cookie认证主要分四步：
    4.服务器在接受客户端请求时会去解析请求头cookie中的sid，然后根据这个sid去找服务器端保存的该客户端的session，然后判断该请求是否合法。
 <img src='https://img-blog.csdn.net/20171216105919887?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZzgzOTMwNTkzOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast' />
 server.js
+
 ```
 var express = require('express');
 var RedisStore = require('connect-redis')(express.session);
@@ -142,6 +143,7 @@ app.get("/", function(req, res) {
 
 app.listen(9080);
 ```
+
 - Token 验证
 
 - OAuth (开放授权)
