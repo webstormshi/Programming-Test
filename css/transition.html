@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>元素上下移动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .title {
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+        width: 230px;
+        transition: width linear 0.3s;
+    }
+    .title:after {
+        content: " ";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        border-width: 2px 2px 0 0;
+        border-color: #C8C8CD;
+        border-style: solid;
+        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        position: relative;
+        top: 10px;
+        position: absolute;
+        right: 2px;
+    }
+    .label {
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+    .sub-title {
+        font-size: 20px;
+        float: left;
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        margin-right: 10px;
+    }
+    .desc {
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="head">
+            <h1 class="title" onclick="handleChange()" id="title">
+                <p class="label">今日头条</p>
+                <p class="sub-title">今日头条</p>
+            </h1>
+            <p class="desc">AMD规范在浏览器环境中异步加载模块，而且可以并行加载多个模块。</p>
+        </header>
+    </div>
+    <script>
+    function handleChange() {
+        let dom = document.getElementById('title');
+        let isClose = dom.style.width ==='140px'
+        dom.style.width = isClose  ? '220px' : '140px';
+    }
+    </script>
+</body>
+</html>

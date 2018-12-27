@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position样式设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            border: 1px solid red;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+        .container div {
+            width: 500px;
+        }
+        .relative {
+            position: relative;
+            background: #eee;
+        }
+        .static {
+            position: static;
+            background: #999;
+        }
+        .absolute {
+            background: #666;
+            height: 50px;
+        }
+        .fixed {
+            position: fixed;
+            background: #808080;
+        }
+        .sticky {
+            position: sticky;
+            background: red;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="relative">reative</div>
+        <div class="static">static</div> -->
+        <div class="absolute">absolute</div>
+        <div class="absolute">absolute</div>
+        <div class="absolute">absolute</div>
+        <!-- <div class="absolute">absolute</div> -->
+        <div class="absolute">absolute</div>
+        <div class="absolute">absolute</div>
+        <div class="absolute">absolute</div>
+        <div class="absolute" style="margin-bottom:200px">absolute</div>
+        <div class="sticky">sticky</div>
+        <!-- <div class="fixed">fixed</div>-->
+    </div>
+</body>
+</html>

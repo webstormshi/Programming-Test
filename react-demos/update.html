@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">123456</div>
+    <script type='text/babel'>
+    class CounterButton extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {count: 1}
+        }
+        
+        shouldComponentUpdate(nextProps, nextState) {
+            if(this.props.color !== nextProps.count) {
+                return true;
+            }
+            if(this.state.count !== nextState.count) {
+                return true;
+            }
+            return false;
+        }
+
+        render() {
+            return (
+                <button
+                    color={this.props.color}
+                    onClick={() => this.setState(state => ({count: state.count + 1}))}>
+                    Count: {this.state.count}
+                </button>
+            );
+        }
+    }
+    ReactDOM.render(
+        <CounterButton />,
+        document.getElementById('root')
+    );
+    </script>
+</body>
+</html>
