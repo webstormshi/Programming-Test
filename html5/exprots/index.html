@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ 
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>html导出生成word文档</title>
+    <style>
+    .word {
+        border:1px solid red;
+    }
+    </style>
+</head>
+<body>
+    <div class="word">
+        <h1>这是我的简历</h1>
+        <div>
+            <section>
+                <h2>石勇</h2>
+                <h3>Web前端工程师</h3>
+                <p>南昌   江西财经大学   软件工程</p>
+                <p>2018.9 - 2019.6   2019届毕业生</p>
+            </section>
+            <img src="./avatar.png" alt="" style="width:200px;">
+        </div>
+    </div>
+    <input type="button" value="导出word">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    <script type="text/javascript" src="fileSaver.js"></script>
+    <script type="text/javascript" src="wordexprot.js"></script>
+    <script>
+        $(function () {
+            $("input[type='button']").click(function (event) {
+                $(".word").wordExport('石勇的简历');
+            });
+        })
+    </script>
+</body>
+</html>

@@ -54,3 +54,19 @@ function add(n) {
 }
 
 console.log(add(20))
+
+
+
+function injectContext(contexts) {
+    return function(RealComponent) {
+        return class extends Component {
+            render() {
+                return (
+                    <Context.Consumer>
+                        {this.props.Children}
+                    </Context.Consumer>
+                )
+            }
+        }
+    }
+}

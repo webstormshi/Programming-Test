@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video的层级调用</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #root {
+        border: 1px solid red;
+        height: 100vh;
+    }
+    #video {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .action {
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 999;
+    }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!-- 
+            x5-video-player-type="h5"
+            以上三种属性决定video的层级标签在最顶端
+        -->
+        <video 
+            src="http://www.w3school.com.cn/i/movie.ogg" 
+            id="video"
+            autoplay=true
+            controls="controls"
+            x5-video-player-type="h5"
+        ></video>
+        <div class="action">
+            <span>关注并分享</span>
+            <span>评论</span>
+            <span>点赞</span>
+        </div>
+    </div>
+</body>
+</html>
