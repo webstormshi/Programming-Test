@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vnode解析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+    var vnode = {
+        tag: 'ul',
+        attrs: {
+            id: 'list'
+        },
+        children: [
+            {
+                tag: 'li',
+                attrs: {
+                    className: 'item',
+                    id: 'item1'
+                },
+                children: ['item 111']
+            },
+            {
+                tag: 'li',
+                attrs: {
+                    className: 'item',
+                    id: 'item2'
+                },
+                children: ['item 222']
+            },
+            {
+                tag: 'li',
+                attrs: {
+                    className: 'item',
+                    id: 'item3'
+                },
+                children: ['item 3333']
+            },
+            {
+                tag: 'li',
+                attrs: {
+                    className: 'item',
+                    id: 'item4'
+                },
+                children: ['item 4444']
+            }
+        ]
+    }
+
+    function dispatch(data, root) {
+        if(typeof data === 'object') {
+            var el = document.createElement(data.tag)
+            for (const key in data.attrs) {
+                if (data.attrs.hasOwnProperty(key)) {
+                    if(key === 'className') {
+                        el.classList = data.attrs[key]
+                    } else {
+                        el[key] = data.attrs[key]
+                    }
+                }
+                console.log('data.children', data.children);
+                var childrenEl = data.children.map(item => {
+                    return dispatch(item, el)
+                })
+                console.log('childrenEl', childrenEl);
+                el.append(childrenEl)
+                root.append(el)
+            }
+        } else {
+            if(typeof data === 'string') {
+                return data;
+            }
+            if(typeof data === null) {
+                return data;
+            }
+        }
+    }
+
+    var root = document.getElementById('root');
+
+    dispatch(vnode, root);
+    </script>
+</body>
+</html>

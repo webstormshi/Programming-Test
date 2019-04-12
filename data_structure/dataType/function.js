@@ -15,6 +15,11 @@ function a(a) {
 
 console.log(a(10));
 
+console.log(1);
+
+// defer   异步加载推迟执行
+
+async
 
 /** 
  * eval 函数的使用

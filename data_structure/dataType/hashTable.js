@@ -2,7 +2,7 @@ function HashTable() {
     var table = [];
 
     this.push = function() {
-
+        
     }
 
     this.put = function() {

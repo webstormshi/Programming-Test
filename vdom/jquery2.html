@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vnode解析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="root" class="root">
+        我是谁
+        <table>
+            <tr>
+                <td class="name">hello</td>
+                <td class="age">22</td>
+                <td class="gender">男</td>
+            </tr>
+            <tr>
+                <td class="name">hello</td>
+                <td class="age">22</td>
+                <td class="gender">男</td>
+            </tr>
+            <tr>
+                <td class="name">hello</td>
+                <td class="age">22</td>
+                <td class="gender">男</td>
+            </tr>
+        </table>
+        23456
+        <span>123456</span>
+        <!-- 你是谁 -->
+    </div>
+    <script>
+    var root = document.getElementById('root');
+    var vnode = {}
+    function getVnode(data, vnode) {
+        // console.log(data.nodeName);
+        // console.log(data.attributes)
+        console.log(data.childNodes);
+        // if(data.childNodes > 2) {
+        //     var el = {};
+        //     el.tag = data.nodeName;
+        //     el.attrs = {}
+        //     for (const key in data.attributes) {
+        //         if (object.hasOwnProperty(key)) {
+        //             if(key === 'class') {
+        //                 el.attrs.className = data.attributes[key]
+        //             } else {
+        //                 el.attrs[key] = data.attributes[key]
+        //             }
+        //         }
+        //     }
+        //     var childList = data.childNodes;
+        //     childList.map(item => {
+        //         var item = getVnode(item, data.children);
+        //         data.children.push(item);
+        //     })
+        // } else {
+
+        // }
+    }
+
+    getVnode(root);
+    </script>
+</body>
+</html>

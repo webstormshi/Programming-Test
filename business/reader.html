@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>屏幕阅读器</title>
+</head>
+<body>
+    <div class="reader" style="margin:0 auto;max-width: 750px">
+        <h1>无代码编程</h1>
+        <h2>作者：怒放的生命</h2>
+        <section>
+            <p>
+                规模化的组织，经常要面临这样的挑战：每个应用的基础设施是相同的，部分的代码也是相同的，
+                甚至于它们可能只是数据模型不同而已。结果却导致了，他/她们要一次又一次地重新编写一个应用。
+            </p>
+            <p>
+                对于一个新的应用而言，它需要对接大量的三方（非自己团队）服务。服务之间的不断变化 ，导致了
+                对应的使用方也需要发生变化。不断变化的业务，导致了前台的设计不断变化。为了应对快速谈的的前
+                台服务，后台便诞生了中台，以提供快速的响应能力。而随着中台进一步沉淀，从某种形式上趋于稳定，
+                而前台仍然需要快速地响应能力。
+            </p>
+        </section>
+    </div>
+</body>
+<script>
+var docs = document.body;
+console.log(docs.innerText.split('\n').filter(item => item !== ''));
+</script>
+</html>
